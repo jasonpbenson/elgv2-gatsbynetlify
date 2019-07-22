@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: jasonpbenson/elgv2_gatsbynetlify
+  branch: master
+
+media_folder: "static/images"
+public_folder: "images"
+site_url: "https://enchanted-life-goods.us/"
+display_url: "https://enchanted-life-goods.us/"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+collections:
+  - name: "ELG"
+    label: "Goods"
+    folder: "src/cms"
+    create: true
+    extention: md
+    slug: "{{type}}_{{title}}"
+    fields:
+      - { name: "image1", label: "Image1", widget: "image" }
+      - { name: "image2", label: "Image2", widget: "image" }
+      - { name: "image3", label: "Image3", widget: "image" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "type", label: "Type", widget: "string" }
