@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Enchanted Life Goods`,
+    description: `future home of ELG Archive + ELG Store`,
+    author: `jason`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,24 +10,24 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/static/img`,
-        name: "uploads",
+        path: `${__dirname}/src/images`,
+        name: "images",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/cms`,
+        path: `${__dirname}/src/pages`,
         name: "pages",
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/cms`,
-        name: `markdown-pages`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/cms/pages/markdown-pages`,
+    //     name: `markdown-pages`,
+    //   },
+    // },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
