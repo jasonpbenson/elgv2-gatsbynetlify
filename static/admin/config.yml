@@ -4,7 +4,7 @@ backend:
   branch: master
 
 media_folder: "static/img"
-public_folder: "images"
+public_folder: "img"
 site_url: "https://enchanted-life-goods.us/"
 display_url: "https://enchanted-life-goods.us/"
 
@@ -21,6 +21,12 @@ collections:
     extention: md
     slug: "{{type}}_{{title}}"
     fields:
+      - {
+          name: "templateKey",
+          label: "Template Key",
+          widget: "hidden",
+          default: "good",
+        }
       - { name: "image1", label: "Image 1", widget: "image" }
       - { name: "image1-alt", label: "Image 1 Alt", widget: "string" }
       - { name: "image2", label: "Image 2", widget: "image" }

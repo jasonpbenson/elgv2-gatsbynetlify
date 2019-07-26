@@ -38,15 +38,20 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        image1
-        image2
-        image3
-        title
-        description
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+          fileAbsolutePath
+          frontmatter {
+            description
+            image1
+            image2
+            image3
+            title
+            type
+          }
+        }
       }
     }
   }

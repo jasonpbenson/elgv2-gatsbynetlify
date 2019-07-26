@@ -8,12 +8,20 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
     {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/img`,
         name: "images",
       },
     },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     path: `${__dirname}/src/images`,
+    //     name: "images",
+    //   },
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
