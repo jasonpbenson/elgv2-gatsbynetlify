@@ -15,13 +15,7 @@ module.exports = {
         name: "images",
       },
     },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     path: `${__dirname}/src/images`,
-    //     name: "images",
-    //   },
-    // },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -29,13 +23,13 @@ module.exports = {
         name: "pages",
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/src/cms/pages/markdown-pages`,
-    //     name: `markdown-pages`,
-    //   },
-    // },
+
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -50,6 +44,7 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
