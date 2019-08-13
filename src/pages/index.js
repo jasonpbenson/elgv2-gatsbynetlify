@@ -1,3 +1,5 @@
 import React from "react"
 
-export default () => <div>ELG</div>
+import IndexPage from "../templates/index-page-template"
+
+export default () => <IndexPage></IndexPage>
