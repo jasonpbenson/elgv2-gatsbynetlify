@@ -1,0 +1,18 @@
+body {
+  background-color: #fffc3f;
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: scroll;
+}
+
+.mainContainer {
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+}

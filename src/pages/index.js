@@ -1,5 +1,20 @@
-import React from "react"
+import React, { Component } from "react"
 
-import IndexPage from "../templates/index-page-template"
+import IndexStyles from "../css/index.module.css"
 
-export default () => <IndexPage></IndexPage>
+import Layout from "../components/Layout"
+import SideBar from "../components/Sidebar"
+
+class Index extends Component {
+  render() {
+    return (
+      <div className={IndexStyles.mainContainer}>
+        <Layout>
+          <SideBar />
+        </Layout>
+      </div>
+    )
+  }
+}
+
+export default Index
